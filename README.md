@@ -8,4 +8,4 @@ Create a music search engine with the following that allows users to query an ar
 3) Twitter tweets about artist<br>
 4) Recommendation System<br>
 
-to search http://localhost:5000/search?q=(search query)<br>
+##To search http://localhost:5000/search?q=(search query)<br>
