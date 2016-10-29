@@ -15,6 +15,6 @@ api = get_authenticated_API()
 
 def search(query):
     l=""   
-    for tweet in tweepy.Cursor(api.search, q=query).items(10):
-        l+=tweet.text+'<br\>'
+    for tweet in tweepy.Cursor(api.search, q=query).items(20):
+        l+=tweet.text+'/<br/>'
     return l
