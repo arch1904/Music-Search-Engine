@@ -16,10 +16,13 @@ def search():
     wiki=""
     playlist=""
     recs=""
+    result=""
     if 'q' in request.args:
         wiki=wiki_search.search(request.args['q'])
         playlist="<a href="+spotify.get_playlist(request.args['q'])+">here</a>"
         tweets=twitter.search(request.args['q'])
-        return "<h2/>Summary:<br/></h2/>"+wiki+ "<br/><br/><h2/>For Playlist Click "+playlist+ "</h2/><br/><br/><h2/>TWEETS:<br/></h2/>"+ tweets+"<br/><br/><h2/>RECCOMENDED FOR YOU</h2/>"+recs 
+        recs=spotify.get_recommendations(request.args['q'])
+        result= "<h2/>Summary:<br/></h2/>"+wiki+ "<br/><h2/>For Playlist Click "+playlist+ "</h2/><h2/>TWEETS:<br/></h2/>"+ tweets+"<br/><h2/>RECOMENDED FOR YOU</h2/>"+"<h2/>"+recs+"</h2/>" 
+        return result
     return "WRONG"
 
