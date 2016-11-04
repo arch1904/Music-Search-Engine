@@ -8,15 +8,7 @@ Create a music search engine with the following that allows users to query an ar
 3) Twitter tweets about artist<br>
 4) Recommendation System<br>
 
-##GET
-http://localhost:5000/search?q=(search query) <br>
+##To Search http://localhost:5000/search?q=(search query)
 
-| Request Parameter   | Value Type | Value                                                    |   
-|---------------------|------------|----------------------------------------------------------|
-| Artist or Song Name | String     | Wikipedia Summary, Playlist, Tweets and Reccommendations |   
- 
-##RESPONSE
+##Add Twitter_Keys.txt file in root folder(where the app folder and run.py are) with your authentication keys in the order followed inside twitter.py seperated by a newline
 
-| Response                                             | Value Type | Value                                                    |
-|------------------------------------------------------|------------|----------------------------------------------------------|
-| Artist Summary, Tweets Recommendations, and Playlist | String     | Wikipedia Summary, Playlist, Tweets and Reccommendations |
