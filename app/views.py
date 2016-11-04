@@ -2,7 +2,8 @@ from flask import Flask, request
 from app import app
 import twitter
 import spotify
-import wiki_search
+from wiki_search import wiki
+wiki1=wiki()
 # static url
 @app.route('/')
 def index():
@@ -18,7 +19,7 @@ def search():
     recs=""
     result=""
     if 'q' in request.args:
-        wiki=wiki_search.search(request.args['q'])
+        wiki=wiki1.search(request.args['q'])
         playlist="<a href="+spotify.get_playlist(request.args['q'])+">here</a>"
         tweets=twitter.search(request.args['q'])
         recs=spotify.get_recommendations(request.args['q'])

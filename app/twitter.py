@@ -3,7 +3,7 @@ import tweepy
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
-f= open('../Twitter_Keys.txt','r')
+f= open('Twitter_Keys.txt','r') #If using twitter file seprately add ../ in front of path
 key1=f.readline().strip('\n')
 key2=f.readline().strip('\n')
 key3=f.readline().strip('\n')
@@ -21,5 +21,3 @@ def search(query):
     for tweet in tweepy.Cursor(api.search, q=query).items(20):
         l+=tweet.text+'/<br/>'
     return l
-
-print search('Eminem')

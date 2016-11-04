@@ -1,8 +1,9 @@
 import wikipedia
 import json
 import urllib2
-
-def search(query):
-	stuff = ""
-	wiki_search = wikipedia.summary(query)
-	return wiki_search
+class wiki:
+	def __init__(self):
+		wiki_search=""
+	def search(self,query):
+		wiki_search = wikipedia.summary(query)
+		return wiki_search
