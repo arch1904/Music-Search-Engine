@@ -10,6 +10,7 @@ Create a music search engine with the following that allows users to query an ar
 
 ##GET
 http://localhost:5000/search?q=(search query) <br>
+
 | Request Parameter   | Value Type | Value                                                    |   
 |---------------------|------------|----------------------------------------------------------|
 | Artist or Song Name | String     | Wikipedia Summary, Playlist, Tweets and Reccommendations |   
