@@ -8,4 +8,14 @@ Create a music search engine with the following that allows users to query an ar
 3) Twitter tweets about artist<br>
 4) Recommendation System<br>
 
-##To search http://localhost:5000/search?q=(search query)<br>
+##GET
+http://localhost:5000/search?q=(search query) <br>
+| Request Parameter   | Value Type | Value                                                    |   
+|---------------------|------------|----------------------------------------------------------|
+| Artist or Song Name | String     | Wikipedia Summary, Playlist, Tweets and Reccommendations |   
+ 
+##RESPONSE
+
+| Response                                             | Value Type | Value                                                    |
+|------------------------------------------------------|------------|----------------------------------------------------------|
+| Artist Summary, Tweets Recommendations, and Playlist | String     | Wikipedia Summary, Playlist, Tweets and Reccommendations |
